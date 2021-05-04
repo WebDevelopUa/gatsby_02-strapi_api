@@ -68,6 +68,16 @@ adding app data
 * Content-Types Builder => Create new component => 'STACK-Item':
   - text field => 'TITLE' => Advanced settings => Required field (check) => Finish => Save
 
+
+## Content for the 'PROJECTS-section'
+
+* Collection Types => 'PROJECTS-section' => Add New PROJECTS-section:
+  - create an entry => fill the fields => Finish => Save => Publish
+  - [image 1](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-1.jpg)
+  - [image 2](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-2.jpg)
+  - [image 3](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-3.jpg)
+  - [image 4](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-4.jpg)
+
 -------
 
 # Content storage:
