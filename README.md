@@ -25,7 +25,7 @@ npm run develop
 - admin@admin.com
 - Admin2000
 
-## Content Type
+## 1. Content Type for the 'JOB-section'
 
 gives structure for app data
 
@@ -38,7 +38,7 @@ gives structure for app data
 * Content-Types Builder => Create new component => 'JOB-description':
   - text field => 'NAME' => Advanced settings => Required field (check) => Finish => Save
 
-## Content
+## Content for the 'JOB-section'
 
 adding app data
 
@@ -52,7 +52,25 @@ adding app data
   - check the result [localhost:1337/JOB-sections](http://localhost:1337/JOB-sections)
     => ``` [{"id":1,"company":"Praesent mollis augue","position":"Integer accumsan augue eu nisl ultrices tempor","date":"10/10/2010","published_at":"2021-05-04T08:28:59.144Z","created_at":"2021-05-04T08:27:56.349Z","updated_at":"2021-05-04T08:28:59.211Z","description":[{"id":1,"name":"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."},{"id":2,"name":"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."},{"id":3,"name":"Proin varius dui sed nulla dignissim porta ut et elit. Praesent id erat sit amet eros malesuada laoreet a non velit."}]}]```
 
-## Content storage:
+## 2. Content Type for the 'PROJECTS-section'
+
+* Content-Types Builder => Create new collection type => 'PROJECTS-section':
+  - text field => 'TITLE' => Advanced settings => Required field (check)
+  - text field => 'DESCRIPTION' => Long text => Advanced settings => Required field (check)
+  - media field => 'IMAGE' => Single media => Advanced settings => Required field (check)
+  - text field => 'GITHUB' => short text
+  - text field => 'URL' => short text
+  - boolean field => 'FEATURED' => Advanced settings => Required field (check) => false
+  - add another field => component => use an existing component => select a component => 'STACK-Item' => Advanced
+    settings => Required field (check) => Finish
+
+
+* Content-Types Builder => Create new component => 'STACK-Item':
+  - text field => 'TITLE' => Advanced settings => Required field (check) => Finish => Save
+
+-------
+
+# Content storage:
 
 connect the DB to see the tables
 
