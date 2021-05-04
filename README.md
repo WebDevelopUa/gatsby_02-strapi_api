@@ -47,6 +47,40 @@ adding app data
   - check the result [localhost:1337/JOB-sections](http://localhost:1337/JOB-sections)
     => ``` [{"id":1,"company":"Praesent mollis augue","position":"Integer accumsan augue eu nisl ultrices tempor","date":"10/10/2010","published_at":"2021-05-04T08:28:59.144Z","created_at":"2021-05-04T08:27:56.349Z","updated_at":"2021-05-04T08:28:59.211Z","description":[{"id":1,"name":"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."},{"id":2,"name":"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."},{"id":3,"name":"Proin varius dui sed nulla dignissim porta ut et elit. Praesent id erat sit amet eros malesuada laoreet a non velit."}]}]```
 
+## Content storage:
+
+connect the DB to see the tables
+
+``` 
+jdbc:sqlite:****\.tmp\data.db
+
+DBMS: SQLite (ver. 3.34.0)
+Case sensitivity: plain=mixed, delimited=mixed
+Driver: SQLite JDBC (ver. 3.34.0, JDBC2.1)
+Ping: 78 ms
+```
+
+``` 
+// config/database.js
+
+module.exports = ({ env }) => ({
+  defaultConnection: 'default',
+  connections: {
+    default: {
+      connector: 'bookshelf',
+      settings: {
+        client: 'sqlite',
+        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+      },
+      options: {
+        useNullAsDefault: true,
+      },
+    },
+  },
+});
+
+```
+
 -----
 -----
 
