@@ -52,9 +52,9 @@ adding app data
   - check the result [localhost:1337/JOB-sections](http://localhost:1337/JOB-sections)
     => ``` [{"id":1,"company":"Praesent mollis augue","position":"Integer accumsan augue eu nisl ultrices tempor","date":"10/10/2010","published_at":"2021-05-04T08:28:59.144Z","created_at":"2021-05-04T08:27:56.349Z","updated_at":"2021-05-04T08:28:59.211Z","description":[{"id":1,"name":"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."},{"id":2,"name":"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."},{"id":3,"name":"Proin varius dui sed nulla dignissim porta ut et elit. Praesent id erat sit amet eros malesuada laoreet a non velit."}]}]```
 
-## 2. Content Type for the 'PROJECTS-section'
+## 2. Content Type for the 'PROJECTS-sections'
 
-* Content-Types Builder => Create new collection type => 'PROJECTS-section':
+* Content-Types Builder => Create new collection type => 'PROJECTS-sections':
   - text field => 'TITLE' => Advanced settings => Required field (check)
   - text field => 'DESCRIPTION' => Long text => Advanced settings => Required field (check)
   - media field => 'IMAGE' => Single media => Advanced settings => Required field (check)
@@ -68,15 +68,29 @@ adding app data
 * Content-Types Builder => Create new component => 'STACK-Item':
   - text field => 'TITLE' => Advanced settings => Required field (check) => Finish => Save
 
+## Content for the 'PROJECTS-sections'
 
-## Content for the 'PROJECTS-section'
-
-* Collection Types => 'PROJECTS-section' => Add New PROJECTS-section:
+* Collection Types => 'PROJECTS-sections' => Add New PROJECTS-section:
   - create an entry => fill the fields => Finish => Save => Publish
   - [image 1](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-1.jpg)
   - [image 2](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-2.jpg)
   - [image 3](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-3.jpg)
   - [image 4](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-4.jpg)
+  - Settings => [Roles & Permissions](http://localhost:1337/admin/settings/users-permissions/roles)
+  - check the result [localhost:1337/PROJECTS-sections](http://localhost:1337/PROJECTS-sections)
+
+``` 
+// gatsby-config.js (add => frontend => check result in GraphiQL => AllStrapiProjects)
+
+   {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,  
+        queryLimit: 1000,
+        contentTypes: [`JOB-sections`, `PROJECTS-sections`]
+      }
+    }
+```
 
 -------
 
