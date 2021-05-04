@@ -20,6 +20,11 @@ npm run develop
 - [localhost:1337/admin/auth/register-admin](http://localhost:1337/admin/auth/register-admin)
 - [localhost:1337/admin](http://localhost:1337/admin)
 
+**Credentials** for the [DB](./tmp/data.db):
+
+- admin@admin.com
+- Admin2000
+
 ## Content Type
 
 gives structure for app data
