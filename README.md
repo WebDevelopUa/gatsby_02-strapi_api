@@ -31,7 +31,21 @@ gives structure for app data
   - add another field => component => use an existing component => select a component => 'JOB-description' => Finish
 
 * Content-Types Builder => Create new component => 'JOB-description':
-  - text field => 'NAME' => Finish => Save
+  - text field => 'NAME' => Advanced settings => Required field (check) => Finish => Save
+
+## Content
+
+adding app data
+
+* Collection Types => 'JOB-section' => Add New JOB-sections:
+  - create an entry => fill the fields => Finish => Save => Publish
+  - check the result [localhost:1337/JOB-sections](http://localhost:1337/JOB-sections)
+    => ```{"statusCode":403,"error":"Forbidden","message":"Forbidden"}```
+  - Settings => [Roles & Permissions](http://localhost:1337/admin/settings/users-permissions/roles)
+    => [Public](http://localhost:1337/admin/settings/users-permissions/roles/2) => check ```find, findone ``` fields =>
+    Save
+  - check the result [localhost:1337/JOB-sections](http://localhost:1337/JOB-sections)
+    => ``` [{"id":1,"company":"Praesent mollis augue","position":"Integer accumsan augue eu nisl ultrices tempor","date":"10/10/2010","published_at":"2021-05-04T08:28:59.144Z","created_at":"2021-05-04T08:27:56.349Z","updated_at":"2021-05-04T08:28:59.211Z","description":[{"id":1,"name":"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."},{"id":2,"name":"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."},{"id":3,"name":"Proin varius dui sed nulla dignissim porta ut et elit. Praesent id erat sit amet eros malesuada laoreet a non velit."}]}]```
 
 -----
 -----
