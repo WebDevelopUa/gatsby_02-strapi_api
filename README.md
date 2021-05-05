@@ -86,11 +86,20 @@ adding app data
 * Content-Types Builder => Create new collection type => 'BLOG-sections':
   - text field => 'TITLE' => Advanced settings => Required field (check)
   - text field => 'DESCRIPTION' => Long text => Advanced settings => Required field (check)
-  - rich text field => 'CONTENT' => Advanced settings => Required field (check)
+  - rich text field (Markdown) => 'CONTENT' => Advanced settings => Required field (check)
   - media field => 'IMAGE' => Single media => Advanced settings => Required field (check)
   - uid field => 'SLUG' => attached field => title
   - enumeration field => 'CATEGORY' => category value1, value2, value3 => Advanced settings => Required field (check)
   - text field => 'DATE' => date => Advanced settings => Required field (check)
+
+## Content for the 'BLOG-sections'
+
+* Collection Types => 'BLOG-sections' => Add New BLOG-section:
+  - create an entry => fill the fields => Finish => Save => Publish
+  - [image 3](https://raw.githubusercontent.com/WebDevelopUa/gatsby_02/master/src/assets/projects-3.jpg)
+  - Settings => [Roles & Permissions](http://localhost:1337/admin/settings/users-permissions/roles) => restart Gatsby
+    server (Front-end)
+  - check the result [localhost:1337/PROJECTS-sections](http://localhost:1337/BLOG-sections)
 
 ``` 
 // gatsby-config.js (add => frontend => check result in GraphiQL => AllStrapiProjects)
