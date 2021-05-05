@@ -1,6 +1,6 @@
 # Strapi (Opensource Headless CMS) App for Gatsby 3 pet-project
 
-Back-end for [Gatsby v3 App](https://github.com/WebDevelopUa/gatsby_02)
+Back-end for [Gatsby v3 App](https://github.com/WebDevelopUa/gatsby_02) Front-end
 
 -------
 
@@ -20,16 +20,18 @@ npm run develop
 - [localhost:1337/admin/auth/register-admin](http://localhost:1337/admin/auth/register-admin)
 - [localhost:1337/admin](http://localhost:1337/admin)
 
+*rename / replace ```tmp``` => ```.tmp``` directory*
+
 **Credentials** for the [DB](./tmp/data.db):
 
 - admin@admin.com
 - Admin2000
 
-## 1. Content Type for the 'JOB-section'
+## 1. Content Type for the 'JOB-sections'
 
 gives structure for app data
 
-* Content-Types Builder => Create new collection type => 'JOB-section':
+* Content-Types Builder => Create new collection type => 'JOB-sections':
   - text field => 'COMPANY' => Advanced settings => Required field (check)
   - text field => 'POSITION' => Advanced settings => Required field (check)
   - text field => 'DATE' => Advanced settings => Required field (check)
@@ -38,11 +40,11 @@ gives structure for app data
 * Content-Types Builder => Create new component => 'JOB-description':
   - text field => 'NAME' => Advanced settings => Required field (check) => Finish => Save
 
-## Content for the 'JOB-section'
+## Content for the 'JOB-sections'
 
 adding app data
 
-* Collection Types => 'JOB-section' => Add New JOB-sections:
+* Collection Types => 'JOB-sections' => Add New JOB-sections:
   - create an entry => fill the fields => Finish => Save => Publish
   - check the result [localhost:1337/JOB-sections](http://localhost:1337/JOB-sections)
     => ```{"statusCode":403,"error":"Forbidden","message":"Forbidden"}```
@@ -79,6 +81,17 @@ adding app data
   - Settings => [Roles & Permissions](http://localhost:1337/admin/settings/users-permissions/roles)
   - check the result [localhost:1337/PROJECTS-sections](http://localhost:1337/PROJECTS-sections)
 
+## 3. Content Type for the 'BLOG-sections'
+
+* Content-Types Builder => Create new collection type => 'BLOG-sections':
+  - text field => 'TITLE' => Advanced settings => Required field (check)
+  - text field => 'DESCRIPTION' => Long text => Advanced settings => Required field (check)
+  - rich text field => 'CONTENT' => Advanced settings => Required field (check)
+  - media field => 'IMAGE' => Single media => Advanced settings => Required field (check)
+  - uid field => 'SLUG' => attached field => title
+  - enumeration field => 'CATEGORY' => category value1, value2, value3 => Advanced settings => Required field (check)
+  - text field => 'DATE' => date => Advanced settings => Required field (check)
+
 ``` 
 // gatsby-config.js (add => frontend => check result in GraphiQL => AllStrapiProjects)
 
@@ -87,7 +100,7 @@ adding app data
       options: {
         apiURL: `http://localhost:1337`,  
         queryLimit: 1000,
-        contentTypes: [`JOB-sections`, `PROJECTS-sections`]
+        contentTypes: [`Job-sections`, `Projects-sections`, `Blog-sections`]
       }
     }
 ```
@@ -168,3 +181,4 @@ on your dev environment and then push the changes to Heroku.
 
 - [Deployment on Qovery](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/qovery.html#deploying-with-the-web-interface)
 
+# That's it!
