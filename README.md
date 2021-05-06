@@ -150,6 +150,46 @@ module.exports = ({ env }) => ({
 
 ```
 
+# External (CDN) media storage at [Cloudinary](https://cloudinary.com)
+
+- login
+- get:
+  - Cloud name: dulbvmp6k
+  - API Key: 139254115365111
+  - API Secret: N6TLC19p_WotC_UzxI53YqebnRY
+  - API Environment variable: CLOUDINARY_URL=cloudinary://139254115365111:N6TLC19p_WotC_UzxI53YqebnRY@dulbvmp6k
+- install [strapi-provider-upload-cloudinary](https://www.npmjs.com/package/strapi-provider-upload-cloudinary)
+- create:
+
+``` 
+// ./config/plugins.js
+
+module.exports = ({ env }) => ({
+  // ...
+  upload: {
+    provider: 'cloudinary',
+    providerOptions: {
+      cloud_name: env('CLOUDINARY_NAME'),
+      api_key: env('CLOUDINARY_KEY'),
+      api_secret: env('CLOUDINARY_SECRET'),
+    },
+    actionOptions: {
+      upload: {},
+      delete: {},
+    },
+  },
+  // ...
+});
+```
+
+```
+// .env
+
+CLOUDINARY_NAME=dulbvmp6k
+CLOUDINARY_KEY=139254115365111
+CLOUDINARY_SECRET=N6TLC19p_WotC_UzxI53YqebnRY
+```
+
 -----
 -----
 
@@ -189,5 +229,10 @@ on your dev environment and then push the changes to Heroku.
 ```
 
 - [Deployment on Qovery](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/qovery.html#deploying-with-the-web-interface)
+- [Cloudinary Media Storage](https://cloudinary.com/pricing)
+- [strapi-provider-upload-google-cloud-storage](https://www.npmjs.com/package/strapi-provider-upload-google-cloud-storage)
+- [strapi-provider-upload-cloudinary](https://www.npmjs.com/package/strapi-provider-upload-cloudinary)
+- [Pexels stock photos](https://www.pexels.com/)
+
 
 # That's it!
