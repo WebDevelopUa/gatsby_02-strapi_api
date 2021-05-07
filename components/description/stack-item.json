@@ -1,8 +1,9 @@
 {
   "collectionName": "components_description_stack_item_s",
   "info": {
-    "name": "STACK-Item'",
-    "icon": "luggage-cart"
+    "name": "STACK-Item",
+    "icon": "luggage-cart",
+    "description": ""
   },
   "options": {},
   "attributes": {

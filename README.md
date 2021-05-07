@@ -114,6 +114,19 @@ adding app data
     }
 ```
 
+## 4. Content Type for the 'ABOUT-page'
+
+Stored in Strapi, single type
+
+* [Content-Types Builder](http://localhost:1337/admin/plugins/content-type-builder/content-types/) => Create new single type => 'ABOUT-page':
+  - text field => 'TITLE' => Advanced settings => Required field (check)
+  - text field => 'INFO' => Long text => Advanced settings => Required field (check)
+  - media field => 'IMAGE' => Single media => Advanced settings => Required field (check)    
+  - add another field => component => use an existing component => select a component => repeatable component => 'stack_item' => Advanced
+  - Pages => [About-page](http://localhost:1337/admin/plugins/content-manager/singleType/) => fill the content => Save => Publish  
+  - Settings => [Roles & Permissions](http://localhost:1337/admin/settings/users-permissions/roles) => check 'find' => Save
+  - check the result [localhost:1337/ABOUT-page](http://localhost:1337/ABOUT-page)
+  
 -------
 
 # Content storage:
@@ -233,6 +246,5 @@ on your dev environment and then push the changes to Heroku.
 - [strapi-provider-upload-google-cloud-storage](https://www.npmjs.com/package/strapi-provider-upload-google-cloud-storage)
 - [strapi-provider-upload-cloudinary](https://www.npmjs.com/package/strapi-provider-upload-cloudinary)
 - [Pexels stock photos](https://www.pexels.com/)
-
 
 # That's it!
